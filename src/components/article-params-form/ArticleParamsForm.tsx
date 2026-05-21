@@ -28,7 +28,8 @@ export const ArticleParamsForm = ({
 }: ArticleParamsFormProps) => {
 	const [formState, setFormState] = useState(articleState);
 	const [isOpen, setIsOpen] = useState(false);
-	const sideBarRef = useRef<HTMLElement | null>(null);
+	type AsideElement = HTMLElementTagNameMap['aside'];
+	const sideBarRef = useRef<AsideElement | null>(null);
 
 	//кнопка применить
 	const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
